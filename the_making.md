@@ -41,3 +41,63 @@ KEY=VALUE
     - `.MessageContent` without this but with GuildMessages bot knows msg is sent but not what it says.**It became a privilaged intent**
 - `{}` is an object
 - **Intents** tel bot which *event* bot listen in server.Without them sometimes they ***won't recieve*** some types of event. 
+
+---
+
+### client.once()
+- event listener in discord.js whihc executes only once
+- listen only once to that event after that it won't listen to that event.
+- useful when some events that ***SHOULD run only one time***.
+     - `ready` when bot is sucessfully logs in
+     - `reconnecting`
+     - `warn`
+- event listener is removed after use
+- runs only once
+---
+
+### client.on()
+
+- used for recurring event
+- runs multiple time
+- action listener is not removed
+
+---
+
+#### 🆚 Difference Between `client.once()` and `client.on()`
+
+| Feature                     | `client.once()` | `client.on()` |
+|-----------------------------|---------------|-------------|
+| **Runs only once?**          | ✅ Yes         | ❌ No (Runs every time the event occurs) |
+| **Removes listener after execution?** | ✅ Yes  | ❌ No |
+| **Best for...**              | One-time events (e.g., `ready`) | Recurring events (e.g., `messageCreate`) |
+
+---
+
+### clinet.user.tag
+
+- return `username` and `discriminator` of your bot.
+```
+MotivationBot#5678
+```
+- we also have,
+    - username
+    - discriminator:4digit no
+    - id:unique ud for each bot
+
+---
+
+### messageCreate event
+
+- runs every time ***user or bot** sends a message
+- it has `message` object whuch has info like
+    - `message.author` sender info
+        - `.bot` 
+             - `True` bot
+             - human
+    - `message.content`: text content
+    - `message.channel`:channel where msg sent
+    - `message.guild`: the server where it was sent,DM =>null
+    - `.createdAt`:timeStamp
+    - `.mentions` user,roles,channels in the message
+    - `.attachement`:List of files or image sattached to the msg
+---

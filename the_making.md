@@ -21,13 +21,14 @@ KEY=VALUE
 >**NOTE**:this shoudln't be commited to git xoz it has sensitive private info
 
 >Thus we use `.gitignore`
+- `.gitignore` is used to ignore the files that should not be added to the **git**.
 - ***NOTE:*** that `.env` is not a extension like *.txt,.py*.
 ---
 
 #### .config()
 
 - used to load *env var* from `.env` into `process.env` ***object***
-- This obj allows to acces *confi values*. 
+- This obj allows to acces *config values*. 
 
 ---
 ### discord.js

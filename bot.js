@@ -1,4 +1,6 @@
 require('dotenv').config();
+console.log("Bot token:", process.env.TOKEN ? "Loaded" : "Not loaded!");
+
 const fs=require('fs');
 
 const {Client,GatewayIntentBits}=require('discord.js');

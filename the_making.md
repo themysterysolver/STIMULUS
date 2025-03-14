@@ -115,6 +115,13 @@ MotivationBot#5678
      - db with *minimal setup*
 - supports many lang
 - easy deploment with github
-
+- they need `package.json` to detect that project is **Node.js**.
+- the **start** tels which file to run
+- to download all dependecies
+```
+npm install
+```
+- also we have used `.gitignore` to hide our `.env` file,thus it won't be on github.
+- so here we shoudl create `TOKEN` in ***varaible** section of our project.
 ---
       

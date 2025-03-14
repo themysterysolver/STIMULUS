@@ -124,4 +124,11 @@ npm install
 - also we have used `.gitignore` to hide our `.env` file,thus it won't be on github.
 - so here we shoudl create `TOKEN` in ***varaible** section of our project.
 ---
+#### if sender is a bot!
+
+- if sender is a bot then no need to check for `createMessage` event.
+```
+message.author.bot
+```
+---
       

@@ -8,7 +8,8 @@ const client=new Client({
     intents:[
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.MessageContent
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.DirectMessages
     ]
 });
 let motivation=[];
@@ -26,6 +27,7 @@ client.once('ready',()=>{
 
 try{
     client.on('messageCreate',(message)=>{
+        if (message.author.bot) return;
         if(message.content==='!motivate'){
             const quote=motivation[Math.floor(Math.random()*motivation.length)];
             message.channel.send(quote);

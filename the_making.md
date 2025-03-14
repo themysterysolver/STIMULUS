@@ -101,3 +101,20 @@ MotivationBot#5678
     - `.mentions` user,roles,channels in the message
     - `.attachement`:List of files or image sattached to the msg
 ---
+
+### client.login(process.env.token)
+- logs the bot into discord
+---
+
+### railway.app
+
+- It is a ***cloud deployment platform***
+- It allows you t0 
+     - host applications
+     - bots
+     - db with *minimal setup*
+- supports many lang
+- easy deploment with github
+
+---
+      

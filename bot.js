@@ -9,10 +9,10 @@ const client=new Client({
         GatewayIntentBits.MessageContent
     ]
 });
-
+let motivation=[];
 try{
-    let motivation=fs.readFileSync('quote.txt','utf-8').split('\n');
-    console.log(motivation);
+    motivation=fs.readFileSync('quote.txt','utf-8').split('\n');
+    // console.log(motivation);
 }
 catch(err){
     console.log(err.message);
@@ -25,7 +25,7 @@ client.once('ready',()=>{
 try{
     client.on('messageCreate',(message)=>{
         if(message.content==='!motivate'){
-            const quote=quotes[Math.floor(Math.random()*motivation.length)];
+            const quote=motivation[Math.floor(Math.random()*motivation.length)];
             message.channel.send(quote);
         }
     });
@@ -33,3 +33,5 @@ try{
 catch(err){
     console.log(err.message);
 }
+
+client.login(process.env.TOKEN);

@@ -33,6 +33,13 @@ try{
             const quote=motivation[Math.floor(Math.random()*motivation.length)];
             message.channel.send(quote);
         }
+        else if(message.content==='!help'){
+            message.channel.send(`
+        📌 **Available Commands:**
+        • \`!motivate\` → Get a random motivational quote
+        • \`!help\` → Show this help menu
+        `);
+        }
     });
 }
 catch(err){
